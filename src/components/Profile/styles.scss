@@ -1,0 +1,65 @@
+.profile {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0px 2px 20px 7px rgba(0,0,0,0.44);
+  width: 100%;
+  padding: 40px 30px 30px;
+  position: relative;
+  @include breakpoint(sm) {
+    padding: 50px;
+  }
+
+  &__closeBtn {
+    position: absolute;
+    font-size: 14px;
+    position: absolute;
+    top: 3%;
+    right: 5%;
+    cursor: pointer;
+    @include breakpoint(sm) {
+      top: 2.5%;
+      right: 4.5%;
+      font-size: 20px;
+    }
+  }
+
+  &__photo {
+    box-shadow: 0px 0px 13px 2px rgba(0,0,0,0.36);
+    border-radius: 9px;
+    img {
+      border-radius: 9px;
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+  }
+  
+  &__description {
+    h3 {
+      margin-bottom: 15px;
+      margin-top: 15px;
+      text-align: center;
+    }
+    p:not(last-child) {
+      margin-bottom: 7px;
+    }
+  }
+}
+
+.profile__wrapper {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+  justify-items: center;
+  @include breakpoint(md) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  @include breakpoint(sm) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+  }
+}

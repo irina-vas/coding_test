@@ -1,0 +1,55 @@
+.profilesPage {
+  padding: 50px 30px;
+
+  h1 {
+    text-align: center;
+    line-height: 1.7;
+    color: #5b73a3;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+    margin: 50px;
+    align-items: center;
+    position: relative;
+    @include breakpoint(sm) {
+      flex-direction: column;
+      align-items:stretch;
+    }
+    @include breakpoint(sm) {
+      margin: 50px 0;
+    }
+    
+    &-filters {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      @include breakpoint(sm) {
+        margin-top: 50px;
+        align-self: center;
+      }
+      p {
+        margin-right: 20px;
+      }
+      .btn:not(:last-child) {
+        margin-right: 20px;
+      }
+    }
+  }
+
+  &__profiles {
+    margin-top: 100px
+  }
+
+  .warning {
+    position: absolute;
+    color: #ba5757;
+    bottom: -60%;
+    left: 0;
+    @include breakpoint(sm) {
+      bottom: 50%;
+      left: 0;
+    }
+  }
+}
